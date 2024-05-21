@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #eeeeee;
+}
+
+
+.img-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, cover the entire div */
+}
+
+/* สำหรับมือถือ (หน้าจอกว้างน้อยกว่า 576px) */
+@media screen and (max-width: 575px) {
+    .img-container {
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    }
+}
+
+/* สำหรับแท็บเล็ตแบบแนวตั้ง (หน้าจอกว้าง 576px ถึง 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .img-container {
+        padding-bottom: 75%; /* Aspect ratio 4:3 */
+    }
+}
+
+/* สำหรับแท็บเล็ตแบบแนวนอน (หน้าจอกว้าง 768px ถึง 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .img-container {
+        padding-bottom: 66.66%; /* Aspect ratio 3:2 */
+    }
+}
+
+/* สำหรับเดสก์ท็อป (หน้าจอกว้าง 992px ขึ้นไป) */
+@media screen and (min-width: 992px) {
+    .img-container {
+        padding-bottom: 75%; /* Aspect ratio 4:3 */
+    }
+}

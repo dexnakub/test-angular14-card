@@ -1,0 +1,26 @@
+.img_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.txt_fname {
+    font-weight: 500;
+    color: #f93909;
+}
+
+.txt_post {
+    font-weight: 500;
+    color: #647482;
+}
+
+.card .card-header {
+    background-color: #ffffff;
+}
+
+.card.active,
+.card.active .card-header,
+.card.active .card-body {
+    background-color: #ccecff;
+}
+

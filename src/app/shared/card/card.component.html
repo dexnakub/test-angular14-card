@@ -1,0 +1,23 @@
+<div class="card my-3 shadow bg-body rounded" *ngFor="let author of authors; let i = index"
+    [ngClass]="{ 'active': i % 2 !== 0 }">
+    <div class="card-header py-2 d-flex align-items-center flex-wrap">
+        <img [src]="author.avatar_url" alt="{{ author.avatar_url }}" class="img_avatar me-3">
+        <span class="txt_fname me-2">{{author.name}} </span>
+        <span class="txt_post">posted on {{ author.created_at | date: 'EEEE, MMMM d, y, HH:mm': '+0000' }}</span>
+    </div>
+
+    <div class="card-body py-4">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="img-container">
+                    <img [src]="author.image_url" alt="{{ author.image_url }}" class="img_post_size">
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <h5 class="card-title fw-bold">{{author.title}}</h5>
+                <p class="card-text fw500">{{author.body}}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
